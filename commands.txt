@@ -1,0 +1,24 @@
+SOURCE ROS2:
+source /opt/ros/foxy/setup.bash && source ~/r2d2_ws/install/setup.bash
+
+RUN NODE IN ROS2:
+ros2 run packageName nameNode
+
+CREATE PACKAGE IN ROS2:
+ros2 pkg create namePackage --build-type ament_python
+
+BUILD PACKAGE IN ROS2:
+build package: ~/r2d2_ws$ colcon build --packages-select r2d2_main_package 
+
+AVOID ALSA ERRORS (add at the end of command to run the publisher)
+2> /dev/null
+
+ENABLE PWM PINS AFTER CONFIGURED THEM IN THE BOARD SETTINGS (SEE JETSON NANO DOCUMENTATION)
+Pin32 PWM0
+sudo busybox devmem 0x700031fc 32 0x45
+sudo busybox devmem 0x6000d504 32 0x2
+
+Pin33 PWM2
+sudo busybox devmem 0x70003248 32 0x46
+sudo busybox devmem 0x6000d100 32 0x00
+
