@@ -1,5 +1,6 @@
 # R2D2 2.0 
 Advanced Embedded Systems Project Fall 2023
+https://youtu.be/79eESkQV9gI
 
 # Overview
 This is the repository for development done on an R2D2 robot using a Nvidia Jetson Nano. The R2D2 robot was originally from a hobby project that fans of the Star Wars universe could build and put together themselves. However, all of the electronics and internal software came as is, with little to no ability to make your own hardware or software improvements. Our team then took apart the existing robot and rebuilt his insides to improve existing functionality and expand his capabilities, you can find the repository here :https://github.com/Myapi314/R2D2Project.
